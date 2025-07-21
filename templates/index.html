@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coco Assistant</title>
+  <script src="/static/script.js" defer></script>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: #ffeaf5;
+      margin: 0;
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    /* === NAVBAR === */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ff8fab;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      box-sizing: border-box;
+      z-index: 999;
+      flex-wrap: wrap;
+    }
+
+    .navbar h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-buttons a {
+      background-color: white;
+      color: #ff5c8a;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #ffe3ed;
+    }
+
+    /* === IMAGE === */
+    .assistant-img-container {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+.assistant-img {
+  width: 250px; /* Increased from 150px */
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+    /* === MAIN BUTTON === */
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      background: #ffc4d6;
+      border: none;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #fda4b8;
+    }
+
+    #output {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      color: #d1004a;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .navbar h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .nav-buttons {
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .nav-buttons a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      #output {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- === NAVBAR === -->
+  <div class="navbar">
+    <h1>Coco Assistant</h1>
+    <div class="nav-buttons">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </div>
+  </div>
+
+  <!-- === IMAGE === -->
+  <div class="assistant-img-container">
+    <img src="{{ url_for('static', filename='images/coco-assistant.jpeg') }}" alt="Coco Assistant" class="assistant-img">
+  </div>
+
+  <!-- === MAIN CONTENT === -->
+  <button onclick="startListening()">🎤 Talk to Coco</button>
+  <div id="output">Say something to Coco!</div>
+
+</body>
+</html>

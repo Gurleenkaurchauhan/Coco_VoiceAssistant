@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Coco</title>
+  <style>
+    body {
+      margin: 0;
+      padding-top: 90px; /* Fix for fixed navbar overlap */
+      background-color: #ffeaf5;
+      font-family: 'Comic Sans MS', sans-serif;
+      text-align: center;
+    }
+
+    /* === NAVBAR === */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ff8fab;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      box-sizing: border-box;
+      z-index: 999;
+      flex-wrap: wrap;
+    }
+
+    .navbar h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-buttons a {
+      background-color: white;
+      color: #ff5c8a;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #ffe3ed;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 1.5rem;
+      text-align: center;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .navbar h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .nav-buttons {
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .nav-buttons a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- === NAVBAR === -->
+  <div class="navbar">
+    <h1>🐻 Coco Assistant</h1>
+    <div class="nav-buttons">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </div>
+  </div>
+
+  <!-- === ABOUT CONTENT (KEPT EXACTLY AS YOU SENT) === -->
+  <div class="content">
+    <h2>Hi, I'm Coco! 🧸</h2>
+    <p>
+      I'm your adorable little AI assistant, here to help you with cute responses, web searches, and even jokes!  
+      Just click the mic and start talking to me. 💬✨
+    </p>
+
+    <p><strong>Features I support:</strong></p>
+    <ul>
+      <li>🎤 Voice commands</li>
+      <li>🔍 Google & YouTube search</li>
+      <li>🐻 Jokes & fun replies</li>
+      <li>📸 Open apps like Instagram</li>
+    </ul>
+
+    <p>I'll keep learning more tricks soon! 💕</p>
+  </div>
+
+</body>
+</html>
